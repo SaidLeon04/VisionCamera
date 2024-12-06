@@ -1,5 +1,13 @@
 {
   "expo": {
+    "plugins": [
+      [
+        "react-native-vision-camera",
+        {
+          "cameraPermissionText": "Se necesita acceso a la cámara para tomar fotos y videos."
+        }
+      ]
+    ],
     "name": "VisionCamera",
     "slug": "VisionCamera",
     "version": "1.0.0",
@@ -13,16 +21,28 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Se necesita acceso a la cámara para tomar fotos y videos."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "permissions": [
+        "android.permission.CAMERA"
+      ],
+      "package": "com.saidleon05.VisionCamera"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "43e6fab9-9b4a-48bc-b155-7180299629b8"
+      }
     }
   }
 }
