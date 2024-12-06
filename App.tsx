@@ -14,7 +14,6 @@ const App = () => {
     })();
   }, []);
   
-  
 
   if (!device || !cameraPermission) {
     return <Text>Solicitando acceso a la cámara frontal...</Text>;
